@@ -1,0 +1,552 @@
+
+
+.iconosRojos{
+    color: #E12424;
+  }
+  
+  
+  
+  
+  /* Ajuste para el icono de búsqueda en el campo vacío */
+  
+  
+  
+  
+  .boton-morado {
+    background-color: #E12424;
+    color: white;
+  }
+  
+  
+  
+  
+  #contenedorcito {
+    display: flex;
+    justify-content: center;
+  
+  
+  }
+  
+  
+  #kaka{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .containerx {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .iconx {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .lightbulb-icon::before {
+    content: "\f0eb"; /* Unicode for lightbulb icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .key-icon::before {
+    content: "\f084"; /* Unicode for key icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
+  .user-icon::before {
+    content: "\f007"; /* Unicode for user icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
+  .input-field {
+    padding: 10px;
+  
+    border-radius: 5px;
+    width: 350px; /* Cambia este valor para ajustar el ancho del input */
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-field2 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px; /* Cambia este valor para ajustar el ancho del input */
+    padding: 10px;
+  
+    display: flex;
+    justify-content: end;
+    
+  }
+  
+  .input-field3 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 760px; /* Cambia este valor para ajustar el ancho del input */
+    padding: 10px;
+  
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+    
+  }
+  
+  
+  
+  
+  #seleccionarpermisos {
+    position: relative;
+      display: flex;
+      margin-right: 0px;
+      
+  
+  
+  }
+  
+  
+  #botonfinal {
+    position: absolute;
+    padding: 12px 40px;
+    font-size: 16px;
+    margin-left: 100px;
+  
+  }
+  
+  
+  #botonfinal2 {
+    position: absolute;
+    padding: 12px 40px;
+    font-size: 16px;
+    margin-right: 300px;
+  
+  }
+  
+  
+  
+  .botonesx{
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .espacio {
+    width: 88px;}
+  
+  
+  
+    .cajaBotones {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .cajaBotones button {
+      padding: 10px 40px;
+      /* Ajusta el padding para hacer los botones más largos */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 20%;
+      /* Ajusta el ancho de los botones */
+  }
+  
+  
+  #guardar {
+    background-color: #E12424;
+    color: white;
+  
+  }
+  
+  #cancelar {
+    background-color: #722F37;
+    color: white;
+  }
+  
+  
+  .espacioEntreBotones {
+    width: 40px;
+    /* Ajusta el ancho del espacio según tus preferencias */
+  }
+  
+  #kaka {
+  margin-right: 60px;
+  
+  }
+  
+  
+  #tablaDat {
+    width: 50%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  
+    /* Fijar el ancho de la tabla */
+  }
+  
+  #tablaDat thead th {
+    background-color: #b4b4b4;
+  
+    text-align: left;
+    width: 10px;
+  }
+  
+  #tablaDat tbody {
+    max-height: 125px;
+    /* Altura máxima deseada para el tbody */
+    display: block;
+    /* Establece un contexto de bloque para el tbody */
+    overflow-y: scroll;
+    /* Habilita la barra de desplazamiento en el tbody */
+    width: 520px;
+  }
+  
+  #tablaDat tbody td {
+    width: 10%;
+    padding: 10px;
+    border-top: 1px solid #f2f2f2;
+  }
+  
+  
+  
+  #tablaInsumos tbody{
+  text-align: center;
+  }
+  
+  /*Estilo de los div*/
+  
+  .contForms{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  }
+  
+  .iconosRojos{
+  color: #E12424;
+  }
+  
+  .iconosMorados{
+  color:#8a0000}
+  
+  input::placeholder {
+  padding-left: 8px;
+  }
+  
+  input{
+  border-radius: 3px;
+  border: 1px solid #6d6d6d;
+  }
+  
+  .input1 input{
+  width: 300px;
+  height: 50px;
+  }
+  
+  .inputCantidad{
+  margin-left: 24vh;
+  }
+  
+  .inputCantidad input{
+  width: 120vh;
+  height: 50px;
+  }
+  
+  .input1 i{
+  font-size: 20px;
+  }
+  
+  .parrafoGris{
+  color: gray;
+  }
+  
+  .añadirImagen{
+  background-color: #6d6d6d;
+  height: 120px;
+  width: 200px;
+  border-radius: 3px;
+  }
+  
+  .añadirImagen #imgPerfil{
+  text-align: center;
+  }
+  
+  .contFormsAbajo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 8%;
+  margin-right: 2%;
+  }
+  
+  
+  /*Estilos de la tabla en Registrar ventas*/
+  
+  .cajaAbajo{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 3%;
+  max-height: 200px;
+  max-width: 450px;
+  overflow: hidden;
+  
+  }
+  
+  
+  .cajaAbajo2{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 3%;
+  max-height: 200px;
+  max-width: 450px;
+  overflow: hidden;
+  
+  }
+  
+  #TablaOrdenProduccion td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  }
+  
+  /* Estilo de las celdas de datos en las filas impares */
+  #TablaOrdenProduccion tr:nth-child(odd) td {
+  background-color: #f2f2f2;
+  }
+  
+  #TablaOrdenProduccion{
+  /* Altura máxima deseada para el tbody */
+  display: block;
+  /* Establece un contexto de bloque para el tbody */
+  overflow-y: scroll;
+  /* Habilita la barra de desplazamiento en el tbody */
+  max-height: 200px;
+  /* Altura máxima deseada para el tbody */
+  display: block;
+  /* Establece un contexto de bloque para el tbody */
+  overflow-y: scroll;
+  /* Habilita la barra de desplazamiento en el tbody */
+  border: 1px solid #ddd;
+  }
+  
+  #TablaOrdenProduccion thead .trclass{
+  align-items: center;
+  background-color: #E12424;
+  color: white;
+  text-align: center;
+  }
+  
+  #TablaOrdenProduccion #TStablaInsumos{
+  text-align: center;
+  }
+  
+  #TablaOrdenProduccion tbody #TSDatos{
+  text-align: center;
+  }
+  
+  
+  #TablaOrdenProduccion th, #TablaOrdenProduccion td {
+  padding: 5px;
+  border: 0px solid #ddd;
+  text-align: center;
+  }
+  
+  #openPopupBtn{
+  width: 72%;
+  height: 35px;
+  border-radius: 10px;
+  font-family: Arial;
+  background-color: #E12424;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  }
+  
+  
+  #openPopupBtnAAA{
+    width: 72%;
+    height: 35px;
+    border-radius: 10px;
+    font-family: Arial;
+    background-color: #E12424;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    }
+  
+  
+  #BtnAgregarIn{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  }
+  
+  .btninsumos{
+  display: flex;
+  justify-content: space-around;
+  margin: 6% 20% 20%;
+  height: 40px;
+  }
+  
+  /*Estilos para la ventana emergente*/
+  
+  .contVentana{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(216, 216, 216);
+  padding: 20px;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 90px;
+  }
+  
+  
+  #dataTable{
+  border: 1px solid black;
+  width: 800px;
+  }
+  
+  #dataTable tr th{
+  text-align: center;
+  }
+  
+  .gris {
+    color: #6d6d6d;
+  }
+  
+  .parrafoGris {
+    color: gray;
+  }
+  
+  
+  
+  .iClienteFrecuente {
+    color: #E12424;
+    cursor: pointer;
+  }
+  
+  
+  #dataTable th{
+  width: 10%;
+  }
+  
+  #dataTable td{
+  border-top: 0.5px solid rgb(41, 41, 41);
+  }
+  
+  /*barra de busqueda venta emergente*/
+  #searchInput{
+  border-radius: 20px;
+  width: 80%;
+  }
+  
+  
+  
+  
+  
+  .contenedoremergentes {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  
+  
+  
+  
+  
+  }
+  
+  #caja2{
+  margin-left: 50px;
+  }
+  
+  #insertBtn {
+  width: 32%;
+  height: 35px;
+  border-radius: 10px;
+  font-family: Arial;
+  background-color: #E12424;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  }
+  
+  #cancelBtn {
+    width: 32%;
+    height: 35px;
+    border-radius: 10px;
+    font-family: Arial;
+    background-color: #E12424;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    }
+  
+  
+    #insertBtnAAA {
+      width: 32%;
+      height: 35px;
+      border-radius: 10px;
+      font-family: Arial;
+      background-color: #E12424;
+      color: white;
+      border: none;
+      margin-top: 10px;
+      }
+      
+      #cancelBtnAAA {
+        width: 32%;
+        height: 35px;
+        border-radius: 10px;
+        font-family: Arial;
+        background-color: #E12424;
+        color: white;
+        border: none;
+        margin-top: 10px;
+        }
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
