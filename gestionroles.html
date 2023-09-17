@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/Menu.css">
     <link rel="stylesheet" href="css/dataTable.css" />
     <link rel="stylesheet" href="css/gestionDeRoles.css">
+    <link rel="stylesheet" href="registroRoles.html">
     <!-- Incluye la biblioteca de Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Incluye la biblioteca de Bootstrap Icons -->
@@ -20,7 +21,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body>
+<body onload="listarDatos()">
     <div class="barraPrincipal">
         <div class="contenedor_1">
 
@@ -116,136 +117,9 @@
                             <th><i class="fa-solid fa-gear iconosRojos"></i> Funciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>80001</td>
-                            <td>Administrador</td>
-                            <td>Se encarga de controlar la empresa</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3, Permiso 4</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80002</td>
-                            <td>Cajero</td>
-                            <td>Se encarga de realizar la venta</td>
-                            <td>Permiso 1, Permiso 2</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80003</td>
-                            <td>Mesero</td>
-                            <td>Se encarga de tomar pedidos</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80004</td>
-                            <td>Administrador</td>
-                            <td>Se encarga de controlar la empresa</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3, Permiso 4</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80005</td>
-                            <td>Cajero</td>
-                            <td>Se encarga de realizar la venta</td>
-                            <td>Permiso 1, Permiso 2</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80006</td>
-                            <td>Mesero</td>
-                            <td>Se encarga de tomar pedidos</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
+                    <tbody id="contenidotabla">
 
-                        <tr>
-                            <td>80007</td>
-                            <td>Administrador</td>
-                            <td>Se encarga de controlar la empresa</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3, Permiso 4</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80008</td>
-                            <td>Cajero</td>
-                            <td>Se encarga de realizar la venta</td>
-                            <td>Permiso 1, Permiso 2</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80009</td>
-                            <td>Mesero</td>
-                            <td>Se encarga de tomar pedidos</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80010</td>
-                            <td>Administrador</td>
-                            <td>Se encarga de controlar la empresa</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3, Permiso 4</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80011</td>
-                            <td>Cajero</td>
-                            <td>Se encarga de realizar la venta</td>
-                            <td>Permiso 1, Permiso 2</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>80012</td>
-                            <td>Mesero</td>
-                            <td>Se encarga de tomar pedidos</td>
-                            <td>Permiso 1, Permiso 2,
-                                Permiso 3</td>
-                            <td>
-                                <i class="fa-solid fa-pen-to-square iconosRojos"></i>
-                                <i class="bi bi-toggle2-on iconos toggle-icon" data-state="on"></i>
-                            </td>
-                        </tr>
+
                         <!-- Agregar más filas según sea necesario -->
                     </tbody>
                 </table>
@@ -275,6 +149,7 @@
     <script src="js/Menu.js"></script>
     <script src="js/gestionDeInsumos.js"></script>
     <script type="text/javascript" src="js/dataTable.js"></script>
+    <script src="funciones.js"></script>
 
 </html>
 
