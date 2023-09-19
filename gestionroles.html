@@ -19,9 +19,10 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </head>
 
-<body onload="listarDatos()">
+<body>
     <div class="barraPrincipal">
         <div class="contenedor_1">
 
@@ -129,8 +130,9 @@
     </div>
 
     <script>
+      var table;
         $(document).ready(function () {
-            var table = $('table.display').DataTable({
+                table = $('table.display').DataTable({
                 lengthMenu: [5], // Establece el número de registros a mostrar en el dropdown
                 pageLength: 5, // Muestra solo 5 registros por página
                 paging: true, // Activa la paginación
@@ -142,6 +144,7 @@
             $('.dataTables_length').hide();
             $('.dataTables_info').hide();
             $('.dataTables_filter').addClass('pull-left');
+            listarDatos()
 
         });
 

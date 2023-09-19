@@ -14,6 +14,12 @@ const listarDatos = async() => {
     .then((resp) => resp.json()) //Obtener la respuesta y convertirla a json
     .then(function(data) {
         let listaUsuarios = data.permisos //Capturar el array devuelto por la api
+
+        table.clear();
+
+        console.log(listaUsuarios)
+
+
         datos = 
         listaUsuarios.map(function(usuario) {//Recorrer el array
             respuesta +=
@@ -23,7 +29,7 @@ const listarDatos = async() => {
             `<td>${usuario.nombrerol}</td>`+
             `<td>${usuario.descrol}</td>`+
             `<td>${usuario.permisosrol}</td>`+
-            `<td>                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html?idrol=${usuario._id}'"></i>
+            `<td>                                <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html?_id=${usuario._id}'"></i>
             <i class="fas fa-toggle-on toggle-icon "></i>
             <i class="fa-solid fa-trash iconosRojos"  onclick='eliminar("${usuario._id}")'></i>
             </td>`+
@@ -31,25 +37,9 @@ const listarDatos = async() => {
             `</tr>`
             body.innerHTML = respuesta
         })
-
-        datos =
-  listaUsuarios.map(function (usuario) {
-    respuesta +=
-      `<tr>
-        <td>${usuario.idrol}</td>`+
-        `<td>${usuario.nombrerol}</td>`+
-        `<td>${usuario.descrol}</td>`+
-        `<td>${usuario.permisosrol}</td>`+
-        `<td>
-          <i class="fa-solid fa-pen-to-square iconosRojos" onclick="window.location.href='ActualizarRoles.html'"></i>
-          <i class="fas fa-toggle-on toggle-icon "></i>
-          <i class="fa-solid fa-trash iconosRojos"  onclick='eliminar("${usuario._id}")'></i>
-        </td>`+
-      `</tr>`;
-    body.innerHTML = respuesta;
-  });
-
+        table.rows.add($(respuesta)).draw();
     })
+
 
 
     
@@ -58,14 +48,15 @@ const registrar = async()=>{
     let _idrol = document.getElementById('idrol').value
     let _nombrerol = document.getElementById('nombrerol').value
     let _descrol = document.getElementById('descrol').value
+    let _permisosrol = document.getElementById('permisosrol').value
         let usuario = {
-            idrol:_idrol,
+            idrol: _idrol,
             nombrerol: _nombrerol,
-            descrol:_descrol,
-            permisosrol: "TeamoXimena"
+            descrol: _descrol,
+            permisosrol: _permisosrol
         }
 
-        fetch(url,  {
+        fetch(url, {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(usuario),//Convertir el objeto _usuario  a un JSON
@@ -86,42 +77,44 @@ const registrar = async()=>{
     }
 
 
-const editar= (usuario)=>{
-    document.getElementById('idrol').value = ''
-    document.getElementById('nombrerol').value = ''
-    document.getElementById('descrol').value = ''
-    document.getElementById('permisosrol').value = ''
 
-    document.getElementById('idrol').value = usuario.idrol
-    document.getElementById('nombrerol').value = usuario.nombrerol
-    document.getElementById('descrol').value = usuario.descrol
-    document.getElementById('permisosrol').value = usuario.permisosrol
-}
-
-const actualizar = (id)=>{
-    let _idrol = document.getElementById('idrol').value
-    let _nombrerol = document.getElementById('nombrerol').value
-    let _descrol = document.getElementById('descrol').value
+    const actualizarrol = async()=>{
+        let _id = document.getElementById('_id').value
+        let _idrol = document.getElementById('idrol').value
+        let _nombrerol = document.getElementById('nombrerol').value
+        let _descrol = document.getElementById('descrol').value
+        let _permisosrol = document.getElementById('permisosrol').value
 
 
-    let usuario = {
-        idrol:_idrol,
-        nombrerol: _nombrerol,
-        descrol:_descrol,
-        permisosrol: "TeamoXimena2"
-    }
-
-        fetch(url,  {
-            method: 'PUT',
-            mode: 'cors',
-            body: JSON.stringify(usuario),//Convertir el objeto _usuario  a un JSON
-            headers: {"Content-type": "application/json; charset=UTF-8"}
-        })
-        .then((resp) => resp.json()) //Obtener la respuesta y convertirla a json
-        .then(json => {
-            alert(json.msg)//Mensaje que retorna la API
-        })
-    }
+        
+            let usuarioActualizado = {
+                _id: _id,
+                idrol: _idrol,
+                nombrerol: _nombrerol,
+                descrol: _descrol,
+                permisosrol: _permisosrol
+            }
+    
+            fetch(url, {
+                method: 'PUT',
+                mode: 'cors',
+                body: JSON.stringify(usuarioActualizado),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then((resp) => resp.json()) //Obtener la respuesta y convertirla a json
+            .then(json => {
+                //alert(json.msg)//Mensaje que retorna la API
+                console.log(json)
+                if(json.msg){
+                    Swal.fire(
+                        json.msg,
+                        '',
+                        'success'
+                    )
+                }
+            })
+        }
+    
    
 
 
