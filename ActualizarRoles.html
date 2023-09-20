@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body onload="cargarDatos()">
     <div class="barraPrincipal">
         <div class="contenedor_1">
 
@@ -100,7 +100,7 @@
         <div class="contenido">
             <center>
                 <div id="titulo">
-                    <h1>Registrar Rol</h1>
+                    <h1>Actualizar Rol</h1>
                     
                 </div>
             </center>
@@ -111,11 +111,12 @@
     <form action="col s12">
       <div id="contenedorcito">
         <div class="input-container">
+          
             <div id="kaka">
-
               <p id="skad"><span class="icon key-icon iconosRojos"></span>ID BD</p>
-              <input id="_id"class="input-field" type="text" placeholder="ID de Rol" style="max-width: 500px;">
+              <input id="_id"class="input-field" type="text" placeholder="ID de Rol" style="max-width: 500px; background-color: rgba(201, 202, 202, 0.418);" readonly>
                 
+
                 <p id="skad"><span class="icon key-icon iconosRojos"></span>ID del Rol</p>
                 <input id="idrol"class="input-field" type="text" placeholder="ID de Rol" style="max-width: 500px;">
             </div>
@@ -196,6 +197,34 @@ $(document).ready(function () {
 <script src="funciones.js"></script>
 
 <link rel="stylesheet" href="gestionderoles.html">
+
+
+
+
+<script>
+  // Función para obtener el ID del cliente de la URL
+  function obtenerIDRolDesdeURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('_id');
+  }
+
+  // Obtener el ID del cliente de la URL
+  const idRol = obtenerIDRolDesdeURL();
+
+  function cargarDatos() {
+    consultarRol(idRol);
+  }
+</script>
+
+
+
+</html>
+
+</body>
+
+</html>
+
+
 
 
 
